@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+
+# Define the data
+lot_numbers = ['2304032', '033', '035', '037', '038', '039']
+mixing_time = 36
+shifts = 2
+shift_length = 12
+testing_time = 4
+total_hours = [(mixing_time + (shift_length * shifts / 2) + testing_time) for i in range(6)]
+
+# Create the bar chart
+plt.bar(lot_numbers, total_hours)
+plt.xlabel('Lot number')
+plt.ylabel('Total hours worked')
+plt.title('Atorvastatin 20mg Production')
+plt.show()
